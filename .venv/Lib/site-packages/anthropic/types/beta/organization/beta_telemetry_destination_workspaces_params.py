@@ -1,0 +1,19 @@
+from __future__ import annotations
+
+from typing import Union
+from typing_extensions import TypeAlias
+
+from .beta_telemetry_destination_workspaces_all_params import BetaTelemetryDestinationWorkspacesAllParams
+from .beta_telemetry_destination_workspaces_exclude_params import BetaTelemetryDestinationWorkspacesExcludeParams
+from .beta_telemetry_destination_workspaces_include_params import BetaTelemetryDestinationWorkspacesIncludeParams
+
+__all__ = ["BetaTelemetryDestinationWorkspacesParams"]
+
+BetaTelemetryDestinationWorkspacesParams: TypeAlias = Union[
+    BetaTelemetryDestinationWorkspacesAllParams,
+    BetaTelemetryDestinationWorkspacesIncludeParams,
+    BetaTelemetryDestinationWorkspacesExcludeParams,
+]
+"""
+Which of the organization's workspaces a telemetry destination covers, as a create or update request sets it.
+"""

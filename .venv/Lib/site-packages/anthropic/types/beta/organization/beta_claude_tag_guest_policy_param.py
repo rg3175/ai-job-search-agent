@@ -1,0 +1,17 @@
+from __future__ import annotations
+
+from typing import Union
+from typing_extensions import TypeAlias
+
+from .beta_claude_tag_guest_policy_allow_param import BetaClaudeTagGuestPolicyAllowParam
+from .beta_claude_tag_guest_policy_restrict_param import BetaClaudeTagGuestPolicyRestrictParam
+from .beta_claude_tag_guest_policy_channel_only_param import BetaClaudeTagGuestPolicyChannelOnlyParam
+
+__all__ = ["BetaClaudeTagGuestPolicyParam"]
+
+BetaClaudeTagGuestPolicyParam: TypeAlias = Union[
+    BetaClaudeTagGuestPolicyAllowParam, BetaClaudeTagGuestPolicyRestrictParam, BetaClaudeTagGuestPolicyChannelOnlyParam
+]
+"""
+What Claude does in a channel while a Slack guest is in it, for everyone in the channel. It changes nothing in a channel without Slack guests. More types can be added.
+"""

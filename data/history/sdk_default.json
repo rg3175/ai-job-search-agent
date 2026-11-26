@@ -1,0 +1,10 @@
+[
+    {
+        "role": "user",
+        "content": "אאאא"
+    },
+    {
+        "role": "assistant",
+        "content": "Credit balance is too low"
+    }
+]

@@ -1,0 +1,19 @@
+from typing import Union
+from typing_extensions import Annotated, TypeAlias
+
+from ..._models import UnionDiscriminator
+from .beta_managed_agents_file_resource_config import BetaManagedAgentsFileResourceConfig
+from .beta_managed_agents_memory_store_resource_config import BetaManagedAgentsMemoryStoreResourceConfig
+from .beta_managed_agents_github_repository_resource_config import BetaManagedAgentsGitHubRepositoryResourceConfig
+
+__all__ = ["BetaManagedAgentsSessionResourceConfig"]
+
+BetaManagedAgentsSessionResourceConfig: TypeAlias = Annotated[
+    Union[
+        BetaManagedAgentsGitHubRepositoryResourceConfig,
+        BetaManagedAgentsFileResourceConfig,
+        BetaManagedAgentsMemoryStoreResourceConfig,
+    ],
+    UnionDiscriminator("type"),
+]
+"""A configured session resource. Echoes the input minus write-only credentials."""

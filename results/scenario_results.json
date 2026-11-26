@@ -1,0 +1,48 @@
+{
+    "scenario_name": "Job Search Agent - Memory Across Sessions",
+    "timestamp": "2026-11-26T20:57:00.718947+00:00",
+    "sessions_tested": 2,
+    "expected_memory": {
+        "preferred_roles": [
+            "Full Stack Developer"
+        ],
+        "technologies": [
+            "Python",
+            "JavaScript"
+        ],
+        "preferred_location": "Israel",
+        "excluded_preferences": []
+    },
+    "actual_memory": {
+        "preferred_roles": [
+            "Full Stack Developer"
+        ],
+        "technologies": [
+            "Python",
+            "JavaScript"
+        ],
+        "preferred_location": "Israel",
+        "excluded_preferences": []
+    },
+    "save_result": {
+        "success": true,
+        "updated_fields": [
+            "preferred_roles",
+            "technologies",
+            "preferred_location",
+            "excluded_preferences"
+        ],
+        "preferences": {
+            "preferred_roles": [
+                "Full Stack Developer"
+            ],
+            "technologies": [
+                "Python",
+                "JavaScript"
+            ],
+            "preferred_location": "Israel",
+            "excluded_preferences": []
+        }
+    },
+    "success": true
+}

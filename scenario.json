@@ -1,0 +1,45 @@
+
+{
+  "scenario_name": "Job Search Agent - Two Session Memory and Conflict Test",
+  "sessions": [
+    {
+      "session_id": "session_1",
+      "messages": [
+        "אני מחפשת משרת Full Stack Developer בישראל. שמור את ההעדפות האלה.",
+        "אני מעדיפה לעבוד עם Python ו-JavaScript, ולא מעוניינת במשרות Java בלבד.",
+        "חפש עד 5 משרות Full Stack Developer בישראל שמתאימות לטכנולוגיות שלי.",
+        "שמור את המשרה המתאימה הראשונה שמצאת והצג לי את המשרות השמורות."
+      ]
+    },
+    {
+      "session_id": "session_2",
+      "messages": [
+        "פתח שיחה חדשה. אילו תפקידים, טכנולוגיות ומיקום שמורים בהעדפות שלי?",
+        "חפש משרות שמתאימות להעדפות השמורות שלי.",
+        "הפעם אני רוצה לבדוק משרות Java בלבד, למרות שבעבר ביקשתי להימנע מהן. בצע את החיפוש הזה רק הפעם ואל תשנה את ההעדפות הקבועות שלי."
+      ]
+    }
+  ],
+  "expected_memory": {
+    "preferred_roles": [
+      "Full Stack Developer"
+    ],
+    "technologies": [
+      "Python",
+      "JavaScript"
+    ],
+    "preferred_location": "Israel",
+    "excluded_preferences": [
+      "Java-only"
+    ]
+  },
+  "expected_checks": [
+    "preferences_saved",
+    "external_job_search_executed",
+    "job_saved",
+    "saved_jobs_retrieved",
+    "memory_loaded_in_new_session",
+    "search_used_saved_preferences",
+    "temporary_conflict_did_not_change_memory"
+  ]
+}

@@ -1,0 +1,36 @@
+from typing import Union
+from typing_extensions import Literal, TypeAlias
+
+__all__ = ["Model"]
+
+Model: TypeAlias = Union[
+    Literal[
+        "claude-fable-5-2",
+        "claude-mythos-5-2",
+        "claude-haiku-5-5",
+        "claude-sonnet-5-5",
+        "claude-fable-5-1",
+        "claude-opus-5-5",
+        "claude-mythos-5-1",
+        "claude-sonnet-5",
+        "claude-fable-5",
+        "claude-mythos-5",
+        "claude-opus-5",
+        "claude-opus-4-8",
+        "claude-opus-4-7",
+        "claude-mythos-preview",
+        "claude-opus-4-6",
+        "claude-sonnet-4-6",
+        "claude-haiku-4-5",
+        "claude-haiku-4-5-20251001",
+        "claude-opus-4-5",
+        "claude-opus-4-5-20251101",
+        "claude-sonnet-4-5",
+        "claude-sonnet-4-5-20250929",
+    ],
+    str,
+]
+"""The model that will complete your prompt.
+
+See [models](https://docs.anthropic.com/en/docs/models-overview) for additional details and options.
+"""

@@ -1,0 +1,4 @@
+anthropic
+requests
+pytest
+claude-agent-sdk
